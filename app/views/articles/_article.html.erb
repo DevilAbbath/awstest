@@ -1,0 +1,23 @@
+<div id="<%= dom_id article %>">
+  <p>
+    <strong>Title:</strong>
+    <%= article.title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= article.body %>
+  </p>
+
+  <p>
+    <strong>Photo:</strong>
+    <% if article.photo.attached?%>
+      <%= image_tag article.photo.variant(:index) %>
+    <% else %>
+      <p>No photo to show</p>
+      
+    <% end %>
+      
+  </p>
+
+</div>
